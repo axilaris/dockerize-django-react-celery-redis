@@ -11,4 +11,6 @@ COPY . /app
 WORKDIR /app
 
 COPY ./entrypoint.sh .
-ENTRYPOINT ["sh", "/app/entrypoint.sh"]
+RUN chmod +x /app/entrypoint.sh
+
+CMD ["/app/entrypoint.sh"]
